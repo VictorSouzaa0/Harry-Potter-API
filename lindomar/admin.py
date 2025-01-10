@@ -11,8 +11,16 @@ class datSpell (admin.ModelAdmin):
 admin.site.register(Spell, datSpell)
 
 class datChar (admin.ModelAdmin):
-    list_display = ('id','name','wizard','eyeColor','hairColor','actor','image')
-    list_display_links = ('id','image')
+    list_display = ('id','name')
+    list_display_links = ('id',)
     list_per_page = 10
 
 admin.site.register(Charcaters, datChar)
+
+class datHouse (admin.ModelAdmin):
+    list_display = ('id', 'name')
+    list_display_links = ('id', )
+    search_fields = ('name',)
+    list_per_page = 10
+
+admin.site.register(House, datHouse)
